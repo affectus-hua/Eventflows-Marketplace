@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    RED.nodes.registerType('configFuzzifier',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+        name: {value:"configFuzzifier"},
+	    Public: {value:""},	    
+        LowPrivacy: {value:""},	    
+        MediumPrivacy: {value:""},
+        HighPrivacy: {value:""},
+        Private: {value:""},	    
+       	    
+            
+	},
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"configFuzzifier";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="configFuzzifier">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+<div class="form-row">
+     <label for="node-Public"><i class="icon-tag"></i> Public</label>
+     <input type="text" id="node-input-Public"  placeholder="Public">
+ </div>
+<div class="form-row">
+     <label for="node-LowPrivacy"><i class="icon-tag"></i> LowPrivacy</label>
+     <input type="text" id="node-input-LowPrivacy"  placeholder="LowPrivacy">
+ </div>
+<div class="form-row">
+     <label for="node-MediumPrivacy"><i class="icon-tag"></i> MediumPrivacy</label>
+     <input type="text" id="node-input-MediumPrivacy"  placeholder="MediumPrivacy">
+ </div>
+
+ <div class="form-row">
+     <label for="node-HighPrivacy"><i class="icon-tag"></i> HighPrivacy</label>
+     <input type="text" id="node-input-HighPrivacy"  placeholder="HighPrivacy">
+ </div>
+ 
+ <div class="form-row">
+     <label for="node-Private"><i class="icon-tag"></i> Private</label>
+     <input type="text" id="node-input-Private"  placeholder="Private">
+ </div>
+ 
+</script>
+
+<script type="text/x-red" data-help-name="configFuzzifier">
+    <p>A node to configure the Data Fields Fuzzifier</p>
+</script>
